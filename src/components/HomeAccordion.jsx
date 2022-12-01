@@ -32,7 +32,13 @@ const HomeAccordion = (props) => {
 
   return (
     <Accordion
+      width="min(100vw, 800px)"
+      marginLeft=""
       allowToggle
+      display="flex"
+      // alignItems="center"
+      justifyContent="flex-start"
+      flexWrap="wrap"
       onChange={(idx) => {
         console.log(senders[idx]);
         clickHandler(idx);
@@ -48,9 +54,11 @@ const HomeAccordion = (props) => {
         return (
           <AccordionItem
             key={item}
+            flexBasis="100%"
             boxShadow="lg"
             borderLeftWidth="5px"
             borderLeftColor={borderClr}
+            marginBottom="1vh"
           >
             <h2>
               <AccordionButton>
