@@ -61,8 +61,15 @@ const HomeAccordion = (props) => {
             marginBottom="1vh"
           >
             <h2>
-              <AccordionButton>
-                <Box flex="1" textAlign="left">
+              <AccordionButton maxWidth="100vw" overflow="hidden">
+                <Box
+                  flex="1"
+                  textAlign="left"
+                  overflowWrap="break-word"
+                  wordWrap="break-word"
+                  w="85%"
+                  fontSize=".8em"
+                >
                   {item}
                 </Box>
                 <AccordionIcon />

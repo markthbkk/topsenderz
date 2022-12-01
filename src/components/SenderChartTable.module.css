@@ -14,7 +14,7 @@
     place-content: center;
     background-color: orange;
 color: black;
-font-size: 1rem;
+font-size: .7rem;
 font-weight: bold;
     flex-basis: 20%;
     flex-grow: 1;
@@ -25,7 +25,7 @@ font-weight: bold;
 .count {
     background-color: white;
 color: black;
-font-size: 1rem;
+font-size: .7rem;
 font-weight: bold;
     flex-basis: 80%;
     flex-grow: 1;

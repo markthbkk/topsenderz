@@ -40,6 +40,8 @@
 }
 
 .buttonPanel {
+  margin-inline: auto;
+  width: min(90vw, 800px);
   margin-top: 4vh;
   margin-bottom: 4vh;
   display: grid;
