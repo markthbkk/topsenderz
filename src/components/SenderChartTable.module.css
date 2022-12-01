@@ -1,0 +1,43 @@
+.chartWrapper {
+    flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 5vw; */
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 90%;
+  margin-bottom: 2vh;
+}
+
+.date {
+    display: grid;
+    place-content: center;
+    background-color: orange;
+color: black;
+font-size: 1rem;
+font-weight: bold;
+    flex-basis: 20%;
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+.count {
+    background-color: white;
+color: black;
+font-size: 1rem;
+font-weight: bold;
+    flex-basis: 80%;
+    flex-grow: 1;
+    text-align: center;
+    /* border-top: 3px solid green; */
+    
+}
+
+
+.topBorder {
+
+height: .3rem;
+
+background-color: rgb(45, 121, 87)
+}

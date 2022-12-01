@@ -1,0 +1,85 @@
+.header {
+  display: flex;
+  height: 12vh;
+  background-color: orange;
+  color: white;
+  margin-bottom: 2.5vh;
+  font-size: 4vh;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+  border-bottom-right-radius: .5rem;
+  box-shadow: rgba(19, 19, 20, 0.5) 5px 5px 7px 1px;
+  width: min(85vw, 800px);
+}
+
+.headerLabel {
+  background-color: transparent;
+  color: black;
+  font-size: 3vh;
+  padding: 1.1vh;
+  flex-basis: 70%;
+  margin-left: 3vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+  border-left: 0.4vh solid white;
+  border-top: 0.4vh solid white;
+  border-top-left-radius: 0.5rem;
+  text-align: left;
+  padding-left: 3vw;
+}
+
+.searchIcon {
+  padding-right: 2vw;
+  color: black;
+}
+
+.searchIcon:hover {
+  cursor: pointer;
+}
+
+.buttonPanel {
+  margin-top: 4vh;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 3fr 1fr 0.8fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.btnLabel > p {
+  /* flex-basis: 5vw; */
+  line-height: 100%;
+  height: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+}
+
+.btn {
+  /* flex-basis: 5vw; */
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  padding-inline: 1rem;
+  background-color: orange;
+  color: black;
+}
+
+.btn:hover {
+  background-color: rgb(242, 194, 21);
+  cursor: pointer;
+  border: none;
+}
+
+.spacer {
+  height: 3.5vh;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}

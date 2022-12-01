@@ -1,0 +1,11 @@
+.item {
+  box-shadow: rgba(19, 19, 20, 0.5) 5px 5px 7px 1px;
+  width: min(85vw, 800px);
+    border-left: 5px solid orange;
+     margin: 0 auto;
+}
+
+.activeItem {
+  border-left: 5px solid rgb(140, 175, 70);
+  
+}
