@@ -121,40 +121,42 @@ const Home = () => {
       )}
       <div className={styles.spacer}></div>
       <HomeAccordion senders={displayArray} />
-      <div className={styles.buttonPanel}>
-        {currentPage > 1 ? (
-          <>
-            <button onClick={prevPage} className={styles.btn}>
-              <FaChevronLeft />
-            </button>
-            <div className={styles.btnLabel}>
-              <p>Previous</p>
-            </div>
-            <div></div>
-          </>
-        ) : (
-          <>
-            <div></div>
-            <div></div>
-            <div></div>
-          </>
-        )}
+      <div className={styles.buttonPanelWrapper}>
+        <div className={styles.buttonPanel}>
+          {currentPage > 1 ? (
+            <>
+              <button onClick={prevPage} className={styles.btn}>
+                <FaChevronLeft />
+              </button>
+              <div className={styles.btnLabel}>
+                <p>Previous</p>
+              </div>
+              <div></div>
+            </>
+          ) : (
+            <>
+              <div></div>
+              <div></div>
+              <div></div>
+            </>
+          )}
 
-        {currentPage < lastPage ? (
-          <>
-            <div className={styles.btnLabel}>
-              <p>Next</p>
-            </div>
-            <button onClick={nextPage} className={styles.btn}>
-              <FaChevronRight />
-            </button>
-          </>
-        ) : (
-          <>
-            <div></div>
-            <div></div>
-          </>
-        )}
+          {currentPage < lastPage ? (
+            <>
+              <div className={styles.btnLabel}>
+                <p>Next</p>
+              </div>
+              <button onClick={nextPage} className={styles.btn}>
+                <FaChevronRight />
+              </button>
+            </>
+          ) : (
+            <>
+              <div></div>
+              <div></div>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
