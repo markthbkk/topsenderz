@@ -14,20 +14,22 @@ let allUsersQueryArrayFinal = new Array(0);
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [indexStart, setIndexStart] = useState()
+  const [indexStart, setIndexStart] = useState();
   const [indexEnd, setIndexEnd] = useState();
   const [displayCandidates, setDisplayCandidates] = useState([]);
   const [displayArray, setDisplayArray] = useState([]);
-  const [lastPage, setLastPage] = useState(1)
-  const [searchVisible, setSearchVisible] = useState(false)
+  const [lastPage, setLastPage] = useState(1);
+  const [searchVisible, setSearchVisible] = useState(false);
 
-  const searchVisibilityHandler = () => {setSearchVisible(!searchVisible)}
+  const searchVisibilityHandler = () => {
+    setSearchVisible(!searchVisible);
+  };
 
   console.log(currentPage);
 
   useEffect(() => {
-    setIndexStart(currentPage * 25 - 25)
-    setIndexEnd(currentPage * 25 - 1)
+    setIndexStart(currentPage * 25 - 25);
+    setIndexEnd(currentPage * 25 - 1);
 
     console.log(indexStart);
     console.log(indexEnd);
@@ -46,14 +48,34 @@ const Home = () => {
   };
 
   const nextPage = function (e) {
-    // e.preventDefault();
     console.log(currentPage, allUsersQueryArrayNoBlanks.length);
-    // setLastPage(Math.ceil(displayCandidates.length / 25));
+
     console.log(lastPage, currentPage);
     if (currentPage < lastPage) {
       console.log("Updating Page Number");
       setCurrentPage(currentPage + 1);
     }
+
+    // const setPanelVisibility = function () {
+    //   const accordion = document.getElementsByClassName("chakra-accordion");
+
+    //   const accordionArray = Array.from(accordion);
+
+    //   const accordionItems = Array.from(accordionArray[0].childNodes);
+
+    //   accordionItems.forEach((item) => {
+    //     item.childNodes[1].outerHTML.replace(
+    //       "display: block;",
+    //       "display: none;"
+    //     );
+    //   });
+
+    //   accordionItems.forEach((item) => {
+    //     console.log(item.childNodes[1].outerHTML);
+    //   });
+    // };
+
+    // setPanelVisibility();
   };
 
   const allUsersQuery = async function () {
@@ -72,14 +94,12 @@ const Home = () => {
       loadDistinctUsers(allUsersQueryArrayNoBlanks);
       console.log(allUsersQueryArrayNoBlanks);
       console.log(indexStart, indexEnd);
-      renderPagedResults()
-      console.log("setting last page")
-      
+      renderPagedResults();
+      console.log("setting last page");
     }
   };
 
   useEffect(() => {
-    
     allUsersQuery();
   }, []);
 
@@ -91,16 +111,15 @@ const Home = () => {
     });
 
     setDisplayArray(allUsersQueryArrayFinal);
-  }
+  };
 
   useEffect(() => {
-    
     console.log(displayCandidates);
     console.log(currentPage);
-    console.log(lastPage)
+    console.log(lastPage);
     console.log(allUsersQueryArrayFinal);
     console.log(indexStart, indexEnd);
-    renderPagedResults()
+    renderPagedResults();
 
     setDisplayArray(allUsersQueryArrayFinal);
   }, [displayCandidates, indexStart]);
